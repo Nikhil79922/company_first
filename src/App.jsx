@@ -9,12 +9,12 @@ function App() {
     <Router>
       <div className="flex h-screen bg-gray-200 overflow-auto">
         {/* Sidebar */}
-        <div className="w-[16vw]">
+        <div className="w-[15.5vw]">
           <Sidebar />
         </div>
 
         {/* Main Section: Header + Content */}
-        <div className="w-[84vw] flex flex-col overflow-hidden">
+        <div className="w-[84.5vw] flex flex-col overflow-hidden">
           <Header />
           <div className="flex-grow">
             <Routes>
