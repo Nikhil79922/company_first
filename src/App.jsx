@@ -4,6 +4,16 @@ import Header from './components/Header';
 import DashboardContent from './components/DashboardContent';
 import Footer from './components/Footer';
 
+
+
+
+
+
+
+
+
+
+
 function App() {
   return (
     <Router>
@@ -18,12 +28,10 @@ function App() {
           <Header />
           <div className="flex-grow">
             <Routes>
-              {/* Route for "/" */}
               <Route
                 path="/"
                 element={<div className="flex justify-center items-center h-full">Welcome to the Home Page!</div>}
               />
-              {/* Route for "/dashboard" */}
               <Route path="/dashboard" element={<DashboardContent />} />
             </Routes>
           </div>
