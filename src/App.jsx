@@ -1,4 +1,4 @@
-// src/App.jsx
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import DashboardContent from './components/DashboardContent';
@@ -6,19 +6,31 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="flex h-screen bg-gray-100 overflow-auto ">
-      {/* Sidebar */}
-      <div className='w-[16vw]'>
-      <Sidebar />
-      </div>
+    <Router>
+      <div className="flex h-screen bg-gray-200 overflow-auto">
+        {/* Sidebar */}
+        <div className="w-[16vw]">
+          <Sidebar />
+        </div>
 
-      {/* Main Section: Header + DashboardContent */}
-      <div className=" w-[84vw] flex flex-col overflow-hidden">
-        <Header />
-        <DashboardContent />
-        <Footer />
+        {/* Main Section: Header + Content */}
+        <div className="w-[84vw] flex flex-col overflow-hidden">
+          <Header />
+          <div className="flex-grow">
+            <Routes>
+              {/* Route for "/" */}
+              <Route
+                path="/"
+                element={<div className="flex justify-center items-center h-full">Welcome to the Home Page!</div>}
+              />
+              {/* Route for "/dashboard" */}
+              <Route path="/dashboard" element={<DashboardContent />} />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

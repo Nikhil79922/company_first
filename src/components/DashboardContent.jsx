@@ -1,4 +1,6 @@
 // src/components/DashboardContent.jsx
+
+
 export default function DashboardContent() {
   const alerts = [
     { timestamp: '2024-10-30 06:21:45', tipo: 'Tipo1', descripcion: 'Descripción de alerta 1' },
@@ -71,7 +73,7 @@ export default function DashboardContent() {
               <tr
                 key={index}
                 className={`${index % 2 === 1 ? 'bg-blue-50' : 'bg-white'
-                  } border-b border-l border-r`}
+                  } border-b-[1px] border-l-[2px] border-r-[1px] border-gray-300`}
               >
                 <td className="p-[15.6px] text-[15px] text-gray-700">{alert.timestamp}</td>
                 <td className="p-[15.6px] text-[15px] text-gray-700">{alert.tipo}</td>
